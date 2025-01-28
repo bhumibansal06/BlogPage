@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Edit Blog</h1>
+        <a href="/blogs">Back to Blogs</a>
+    </header>
+    <main class="form-container">
+        <form action="/blogs/<%= post.id %>?_method=PATCH" method="post">
+            <textarea name="content"><%= post.content %></textarea>
+            <button type="submit">Update Blog</button>
+        </form>
+    </main>
+    <footer>© 2024 Blog Your Way</footer>
+</body>
+</html>

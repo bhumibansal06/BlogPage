@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Your Way</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Your Way</h1>
+        <nav>
+            <a href="/blogs">Home</a>
+            <a href="/blogs/new">Create Blog</a>
+        </nav>
+    </header>
+    <main class="blog-container">
+        <% for (let blog of blogs) { %>
+        <div class="blog-post">
+            <h3>Username: <%= blog.username %></h3>
+            <p><%= blog.content %></p>
+            <a href="/blogs/<%= blog.id %>">View Details</a>
+            <a href="/blogs/<%= blog.id %>/edit">Edit</a>
+            <form action="/blogs/<%= blog.id %>?_method=DELETE" method="post">
+                <button>Delete</button>
+            </form>
+        </div>
+        <% } %>
+    </main>
+    <footer>© 2024 Blog Your Way</footer>
+</body>
+</html>
