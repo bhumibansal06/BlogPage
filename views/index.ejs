@@ -18,12 +18,11 @@
         <% for (let blog of blogs) { %>
         <div class="blog-post">
             <h3>Username: <%= blog.username %></h3>
-            <p><%= blog.content %></p>
-            <a href="/blogs/<%= blog.id %>">View Details</a>
-            <a href="/blogs/<%= blog.id %>/edit">Edit</a>
-            <form action="/blogs/<%= blog.id %>?_method=DELETE" method="post">
-                <button>Delete</button>
-            </form>
+            <p><%= blog.content.substring(0, 150) %>... <!-- Show only the first 150 characters of the content -->
+            </p>
+            <a href="/blogs/<%= blog.id %>">Read More</a> <!-- Link to the full blog post -->
+                <a href="/blogs/<%= blog.id %>/edit">Edit</a>
+                <a href="/blogs/<%= blog.id %>/delete">Delete</a>
         </div>
         <% } %>
     </main>
