@@ -25,7 +25,7 @@ A dynamic blog website that allows users to add, edit, view, and delete blogs. U
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/your-username/BlogPage.git
+   git clone https://github.com/bhumibansal06/BlogPage.git
 
 2. Navigate to the project directory:
    cd blogpage
