@@ -30,6 +30,9 @@ let blogs = [
         password: "pass"
     }
 ];
+app.get("/", (req, res) => {
+    res.render("landing");
+});
 
 app.get("/blogs", (req, res) => {
     res.render("index", { blogs });
@@ -103,6 +106,14 @@ app.delete("/blogs/:id", (req, res) => {
     blogs = blogs.filter((p) => p.id !== id);
     res.redirect("/blogs");
 });
+
+// Catch-all route for all other requests (rendering the pre-rendered HTML)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
+  
+  // Export the app as a serverless function
+  module.exports = app;
 
 
 const port = 8080;
