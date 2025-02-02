@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Your Way - Express Yourself</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #2c3e50, #060606); /* Updated gradient for subtle tones */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85); /* Slightly lighter for readability */
+            margin: 1rem 0;
+            max-width: 600px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #3498db, #2980b9); /* Softer, cleaner gradient */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #2980b9, #3498db); /* Reversed gradient for hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Welcome to your Blog Space</h1>
+        <p>Share your thoughts, express your ideas, and explore amazing stories.</p>
+        <a href="/blogs" class="btn">Start Exploring</a>
+        <div class="footer">
+            &copy; 2025 Blog Your Way. All rights reserved.
+        </div>
+    </section>
+
+</body>
+</html>
